@@ -119,9 +119,14 @@ body {
 }
 
 .herosection {
+  width: 100vw;
+  background-color: var(--background-color);
+  padding: 0rem 1.2rem;
+}
+
+.herosection-container {
   max-width: 1280px;
   margin: 4rem auto 0rem;
-  padding: 0rem 1.2rem;
 }
 
 .contentfirst {
@@ -239,6 +244,7 @@ body {
 }
 .secondcontent h2 {
   font-size: 2rem;
+  text-align: center;
 }
 
 .social-media-boxes {
@@ -277,7 +283,7 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .herosection {
+  .herosection-container {
     margin: 1rem auto 0rem;
   }
   .contentfirst {
@@ -358,6 +364,8 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
+  justify-content: center;
+  width: 100%;
 }
 
 .cards {
@@ -426,6 +434,88 @@ body {
 
 @media screen and (max-width: 768px) {
   .cardscontainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.testimonial-section {
+  width: 100vw;
+  padding: 0rem 1.2rem;
+  background-color: var(--background-color);
+}
+
+.testimonial-container {
+  max-width: 1280px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0rem;
+  gap: 1.5rem;
+}
+
+.testimonial-container > h2 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.testimonial-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.testimonial-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.2rem 1rem;
+  border: 1px solid var(--light-graygray);
+  box-shadow: 0px 0px 3px 0px gray;
+  border-radius: 0.5rem;
+  transition: all 0.2s linear 0s;
+}
+
+.testimonial-logo-container {
+  height: 5rem;
+  width: 5rem;
+  margin-top: 1.2rem;
+}
+
+.testimonial-logo-container img {
+  height: 100%;
+  width: 100%;
+}
+
+.testimonial-box > h4 {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin-top: 1.2rem;
+}
+
+.testimonial-box p:first-child {
+  font-size: 0.9rem;
+}
+.testimonial-box p:last-child {
+  color: var(--dark-gray);
+}
+
+.testimonial-box:hover {
+  transform: scale(1.07);
+  box-shadow: 0px 0px 3px 0px blue;
+}
+
+@media screen and (max-width: 768px) {
+  .testimonial-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .testimonial-content {
     grid-template-columns: repeat(1, 1fr);
   }
 }
