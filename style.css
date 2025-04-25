@@ -22,7 +22,7 @@ body {
   width: 100vw;
   font-family: "inter", sans-serif;
   background-color: var(--background-color);
-  padding: 1.2rem;
+  padding: 1.2rem 0rem;
 }
 
 .headcontent {
@@ -32,6 +32,7 @@ body {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  padding: 0rem 1.2rem;
 }
 
 .left-content {
@@ -120,6 +121,7 @@ body {
 .herosection {
   max-width: 1280px;
   margin: 4rem auto 0rem;
+  padding: 0rem 1.2rem;
 }
 
 .contentfirst {
@@ -268,10 +270,9 @@ body {
 
 .smb-logo:hover .img-logo {
   transform: scale(1.1);
-  
 }
 
-.smb-logo:hover span{
+.smb-logo:hover span {
   color: var(--link-color);
 }
 
@@ -321,8 +322,110 @@ body {
   }
 
   .social-media-boxes {
-    width: 80%;
+    width: 90%;
     grid-template-columns: repeat(2, 2fr);
     row-gap: 1.5rem;
+  }
+}
+
+.cardsection {
+  width: 100vw;
+  background-color: var(--light-gray);
+  margin-top: 1.5rem;
+  padding: 2rem 1.2rem;
+}
+
+.cardmaincontent {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cardcontent h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.cardcontent p {
+  margin-top: 1rem;
+  color: var(--gray);
+}
+
+.cardscontainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.5rem 1.9rem;
+  border-radius: 0.5rem;
+  color: white;
+  box-shadow: 0px 0px 4px 0px gray;
+  transition: all 0.2s linear 0s;
+}
+
+.card-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: var(--background-color);
+  overflow: hidden;
+}
+
+.card-icon-container img {
+  height: 50%;
+  width: 50%;
+}
+
+.card1 {
+  background-color: #3979da;
+}
+
+.card2 {
+  background-color: #fd4c70;
+}
+
+.card3 {
+  background-color: #fbae45;
+}
+
+.card4 {
+  background-color: #2eafb3;
+}
+
+.card5 {
+  background-color: #4f803b;
+}
+
+.card6 {
+  background-color: #565284;
+}
+
+.cards h3 {
+  font-size: 1.4rem;
+}
+
+.cards p {
+  font-size: 1rem;
+}
+
+.cards:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+  .cardscontainer {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
